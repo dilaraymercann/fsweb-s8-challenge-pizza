@@ -2,10 +2,10 @@ export default function Footer() {
     return (
         <>
             <footer>
-                <div class="footer-container">
-                    <div class="footor-contact-section">
-                        <span class="footer-title">Teknolojik<br /> Yemekler</span>
-                        <ul class="footer-contact">
+                <div className="footer-container">
+                    <div className="footor-contact-section">
+                        <span className="footer-title">Teknolojik<br /> Yemekler</span>
+                        <ul className="footer-contact">
                             <li>
                                 <img src="./images/iteration-2-images/footer/icons/icon-1.png" alt="Location" />
                                 <span>341 Londonderry Road,<br /> Istanbul Türkiye</span>
@@ -20,9 +20,9 @@ export default function Footer() {
                             </li>
                         </ul>
                     </div>
-                    <div class="footer-menu">
+                    <div className="footer-menu">
                         <h2>Hot Menu</h2>
-                        <div class="footer-menu-list">
+                        <div className="footer-menu-list">
                             <ul>
                                 <li>Terminal Pizza</li>
                                 <li>5 Kişilik Hackathlon Pizza</li>
@@ -33,9 +33,9 @@ export default function Footer() {
                             </ul>
                         </div>
                     </div>
-                    <div class="footer-instagram">
+                    <div className="footer-instagram">
                         <h2>Instagram</h2>
-                        <div class="footer-photos">
+                        <div className="footer-photos">
                             <div>
                                 <img src="./images/iteration-2-images/footer/insta/li-0.png" alt="Instagram Photo" />
                                 <img src="./images/iteration-2-images/footer/insta/li-1.png" alt="Instagram Photo" />
@@ -49,9 +49,9 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-                <div class="footer-bottom">
+                <div className="footer-bottom">
                     <span>© 2023 Teknolojik Yemekler.</span>
-                    <i class="fa-brands fa-twitter"></i>
+                    <i className="fa-brands fa-twitter"></i>
                 </div>
             </footer>
         </>
