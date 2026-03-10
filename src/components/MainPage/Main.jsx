@@ -1,4 +1,5 @@
 import "./Main.css";
+import { Link } from 'react-router-dom'
 
 export default function Main() {
     return (
@@ -56,18 +57,24 @@ export default function Main() {
                         <img src="images/iteration-2-images/cta/kart-1.png" alt="Özel Lezzetus" />
                         <h1>Özel<br /> Lezzetus</h1>
                         <h3>Position:Absolute Acı Burger</h3>
-                        <a className="menu-button" href="#">SİPARİŞ VER</a>
+                        <Link to="/order" className="menu-button">
+                            SİPARİŞ VER
+                        </Link>
                     </div>
                     <div className="second-group-menu">
                         <div className="second-menu">
                             <img src="images/iteration-2-images/cta/kart-2.png" alt="Hackathlon Burger Menu" />
                             <h2>Hackathlon <br />Burger Menü</h2>
-                            <a className="menu-button" href="#">SİPARİŞ VER</a>
+                            <Link to="/order" className="menu-button">
+                                SİPARİŞ VER
+                            </Link>
                         </div>
                         <div className="third-menu">
                             <img src="images/iteration-2-images/cta/kart-3.png" alt="Kurye" />
                             <h3><span className="third-menu-text">Çoooook</span> hızlı <br />npm gibi kurye</h3>
-                            <a className="menu-button" href="#">SİPARİŞ VER</a>
+                            <Link to="/order" className="menu-button">
+                                SİPARİŞ VER
+                            </Link>
                         </div>
                     </div>
                 </div>

@@ -121,7 +121,10 @@ export default function Order() {
     return (
         <>
             <div
-                style={{ backgroundColor: "#CE2829" }}
+                style={{
+                    backgroundColor: "#CE2829",
+                    position: "absolute"
+                }}
             >
                 <Container>
                     <Row>
@@ -132,47 +135,58 @@ export default function Order() {
                                 className="img-fluid"
                                 style={{ height: "30px" }}
                             />
-                            <p className="text-white mt-2 mb-0">
-                                Anasayfa - <strong>Sipariş Oluştur</strong>
-                            </p>
+
                         </Col>
                     </Row>
                 </Container>
             </div >
+            <div className="pizza-section" style={{
+                backgroundColor: "#F0EAE1"
+            }}>
+                <img src="/images/iteration-2-images/pictures/food-2.png" className="pizza-image"></img>
+                <Col md="8" className="mx-auto pizza-content">
+                    <Row><p style={{
+                        color: "#5F5F5F",
+                        paddingTop: "2rem"
+                    }}>
+                        Anasayfa - <span style={{
+                            color: "#CE2829"
+                        }}>Sipariş Oluştur</span>
+                    </p></Row>
+                    <Row >
+                        <Col md="12">
+                            <h4>Position Absolute Acı Pizza</h4>
+                        </Col>
+                    </Row>
+
+                    <Row className="align-items-center mb-2">
+                        <Col md="6">
+                            <h3 className="fw-bold">85.50₺</h3>
+                        </Col>
+
+                        <Col md="6" className="text-end">
+                            <span className="me-3">4.9</span>
+                            <span className="text-muted">(200)</span>
+                        </Col>
+                    </Row>
+
+                    <Row className="mt-4">
+                        <Col md="12">
+                            <p className="text-muted">
+                                Frontend Dev olarak hala position:absolute kullanıyorsan bu çok acı pizza tam sana göre.
+                                Pizza, domates, peynir ve genellikle çeşitli diğer malzemelerle kaplanmış, daha sonra
+                                geleneksel olarak odun ateşinde bir fırında yüksek sıcaklıkta pişirilen, genellikle
+                                yuvarlak, düzleştirilmiş mayalı buğday bazlı hamurdan oluşan İtalyan kökenli lezzetli
+                                bir yemektir. Küçük bir pizzaya bazen pizzetta denir.
+                            </p>
+                        </Col>
+                    </Row>
+                </Col>
+            </div>
             <Form onSubmit={handleSubmit} className="mt-4 p-4">
 
                 <Row>
                     <Col md="8" className="mx-auto">
-                        <FormGroup>
-                            <Row className='mt-5'>
-                                <Col md="12">
-                                    <h4>Position Absolute Acı Pizza</h4>
-                                </Col>
-                            </Row>
-
-                            <Row className="align-items-center mb-2">
-                                <Col md="6">
-                                    <h3 className="fw-bold">85.50₺</h3>
-                                </Col>
-
-                                <Col md="6" className="text-end">
-                                    <span className="me-3">4.9</span>
-                                    <span className="text-muted">(200)</span>
-                                </Col>
-                            </Row>
-
-                            <Row className="mt-4">
-                                <Col md="12">
-                                    <p className="text-muted">
-                                        Frontend Dev olarak hala position:absolute kullanıyorsan bu çok acı pizza tam sana göre.
-                                        Pizza, domates, peynir ve genellikle çeşitli diğer malzemelerle kaplanmış, daha sonra
-                                        geleneksel olarak odun ateşinde bir fırında yüksek sıcaklıkta pişirilen, genellikle
-                                        yuvarlak, düzleştirilmiş mayalı buğday bazlı hamurdan oluşan İtalyan kökenli lezzetli
-                                        bir yemektir. Küçük bir pizzaya bazen pizzetta denir.
-                                    </p>
-                                </Col>
-                            </Row>
-                        </FormGroup>
                         <Row>
                             <Col xs="6">
                                 <Label className="fw-bold mb-2">
@@ -227,7 +241,7 @@ export default function Order() {
                                         onChange={handleChange}
                                     >
                                         <option value="" disabled>
-                                            Hamur Kalınlığı
+                                            - Hamur Kalınlığı Seç -
                                         </option>
 
                                         <option value="ince">İnce Hamur</option>
@@ -249,6 +263,7 @@ export default function Order() {
                                         {item.label}
 
                                         <Input
+                                            className="malzeme"
                                             type="checkbox"
                                             name="malzeme"
                                             value={item.value}

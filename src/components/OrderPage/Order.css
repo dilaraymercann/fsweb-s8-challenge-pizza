@@ -1,3 +1,24 @@
+.pizza-section {
+    position: relative;
+    background-color: #F0EAE1;
+    padding-top: 10rem;
+    padding-bottom: 2rem;
+}
+
+.pizza-image {
+    position: absolute;
+    top: -300px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+}
+
+.pizza-content {
+    margin-top: 5rem;
+    position: relative;
+    z-index: 1;
+}
+
 .custom-radio {
     display: block;
     position: relative;
@@ -110,4 +131,26 @@
     img.logo {
         height: 45px;
     }
+}
+
+@media (max-width:768px) {
+
+    .pizza-section {
+        padding: 6rem 3rem 4rem 3rem;
+    }
+
+    .pizza-image {
+        width: 220px;
+        top: -120px;
+    }
+
+    .custom-radio,
+    .custom-checkbox {
+        font-size: 1rem;
+    }
+
+    .custom-checkbox {
+        margin-bottom: 0.5rem;
+    }
+
 }
