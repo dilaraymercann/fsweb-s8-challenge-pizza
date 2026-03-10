@@ -1,0 +1,162 @@
+footer {
+    background-color: #1A1A1A;
+    margin-top: 3rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem;
+}
+
+.footer-title {
+    font-family: Londrina Solid;
+    font-size: 2rem;
+    color: var(--color-white);
+}
+
+.footor-contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: white;
+    list-style: none;
+    font-family: Barlow;
+}
+
+.footer-contact li {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-contact li img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.footer-menu {
+    color: var(--color-white);
+    font-family: Barlow;
+}
+
+.footer-menu h2 {
+    font-weight: 400;
+}
+
+.footer-menu-list ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    list-style: none;
+    margin-top: 3rem;
+}
+
+.footer-instagram {
+    color: var(--color-white);
+    font-family: Barlow;
+}
+
+.footer-instagram h2 {
+    font-weight: 400;
+}
+
+.footer-photos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.footer-photos div:first-child {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-photos div:nth-child(2) {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 2rem;
+    color: var(--color-white);
+    font-family: Barlow;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 576px) {
+    .footer-container {
+        flex-wrap: wrap;
+        row-gap: 2rem;
+    }
+
+    .footer-title {
+        font-size: 2.5rem;
+    }
+
+    .footer-photos {
+        flex-wrap: wrap;
+    }
+
+    .footer-photos div:first-child {
+        flex-wrap: wrap;
+    }
+
+    .footer-photos div:nth-child(2) {
+        flex-wrap: wrap;
+    }
+
+    .footer-bottom {
+        flex-wrap: wrap;
+        row-gap: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .footer-bottom i {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .footer-container {
+        flex-wrap: wrap;
+        row-gap: 2rem;
+    }
+
+    .footer-title {
+        font-size: 2.7rem;
+    }
+
+    .footer-photos {
+        flex-wrap: wrap;
+    }
+
+    .footer-photos div:first-child {
+        flex-wrap: wrap;
+    }
+
+    .footer-photos div:nth-child(2) {
+        flex-wrap: wrap;
+    }
+
+    .footer-bottom {
+        flex-wrap: wrap;
+        row-gap: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .footer-bottom i {
+        font-size: 1.6rem;
+    }
+}

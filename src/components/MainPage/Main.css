@@ -1,0 +1,371 @@
+.category-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.category-list {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding: 1rem 0;
+    margin: 0;
+}
+
+.category-item a {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-decoration: none;
+    color: var(--color-gray-dark);
+    font-size: 14px;
+    font-family: Barlow;
+}
+
+.category-item img {
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.grouped-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 2rem;
+    gap: 1rem;
+}
+
+.second-group-menu {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.first-menu {
+    width: 30%;
+    position: relative;
+    display: flex;
+    border-radius: 1rem;
+}
+
+.second-menu {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1em;
+}
+
+.menu-button {
+    color: var(--color-red);
+    background-color: var(--color-white);
+    border: none;
+    padding: 0.8rem 1.5rem 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 3rem;
+    position: absolute;
+}
+
+.third-menu {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+}
+
+.first-menu img {
+    border-radius: 1rem;
+    width: 100%;
+}
+
+.first-menu h1 {
+    font-size: 3rem;
+    font-family: Quattrocento;
+    font-weight: 600;
+    position: absolute;
+    color: white;
+    top: 1.6rem;
+    left: 2rem;
+}
+
+.first-menu h3 {
+    font-size: 0.9rem;
+    font-family: Barlow;
+    font-weight: 500;
+    position: absolute;
+    color: white;
+    top: 9rem;
+    left: 2rem;
+}
+
+.first-menu a {
+    top: 12rem;
+    left: 2rem;
+}
+
+.second-menu img {
+    border-radius: 1rem;
+    width: 100%;
+}
+
+.second-menu h2 {
+    color: white;
+    font-family: Barlow;
+    font-weight: 500;
+    position: absolute;
+    font-size: 1.5rem;
+    top: 1rem;
+    left: 2rem;
+}
+
+.second-menu a {
+    top: 6rem;
+    left: 2rem;
+}
+
+.third-menu h3 {
+    font-family: Barlow;
+    font-size: 1.5rem;
+    font-weight: 500;
+    position: absolute;
+    left: 2rem;
+    top: 1rem;
+}
+
+.third-menu a {
+    top: 6rem;
+    left: 2rem;
+}
+
+.third-menu img {
+    border-radius: 1rem;
+    width: 100%;
+}
+
+.third-menu-text {
+    color: var(--color-red);
+}
+
+.menu-category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-category-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+}
+
+.menu-category-text span:first-child {
+    font-family: Satisfy;
+    color: var(--color-red);
+    font-size: 2rem;
+}
+
+.menu-category-text span:nth-child(2) {
+    font-family: Barlow;
+    color: var(--color-gray-dark);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.category-border {
+    border: none;
+    background-color: var(--color-white);
+    border-radius: 3rem;
+    padding: 0.8rem 1.2rem 0.8rem 1.2rem;
+}
+
+.category-border-pizza {
+    border: none;
+    background-color: var(--color-gray-dark);
+    border-radius: 3rem;
+    padding: 0.8rem 1.2rem 0.8rem 1.2rem;
+}
+
+.category-border-pizza a {
+    color: var(--color-white);
+}
+
+.menu-category-list {
+    gap: 1rem;
+}
+
+.products {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.products-item {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    background-color: var(--color-white);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.item-description {
+    margin-top: 1rem;
+    font-family: Barlow;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--color-gray-dark);
+}
+
+.products-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    row-gap: 1rem;
+}
+
+.product-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-group {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.products-item img {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.price {
+    font-weight: bold;
+    color: var(--color-gray-dark);
+}
+
+@media (max-width: 576px) {
+    .category-nav {
+        flex-wrap: wrap;
+        margin: 1rem;
+    }
+
+    .category-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .category-item {
+        width: 45%;
+    }
+
+    .first-menu,
+    .second-group-menu {
+        width: 100%;
+    }
+
+    .first-menu h1 {
+        font-size: 4rem;
+        top: 2rem;
+        left: 3rem;
+    }
+
+    .first-menu h3 {
+        font-size: 1.5rem;
+        top: 13rem;
+        left: 3rem;
+    }
+
+    .first-menu a {
+        font-size: 1.5rem;
+        top: 17rem;
+        left: 3rem;
+    }
+
+    .second-menu h2 {
+        font-size: 2.5rem;
+        top: 1.5rem;
+        left: 3rem;
+    }
+
+    .second-menu a {
+        font-size: 1.5rem;
+        top: 10rem;
+        left: 3rem;
+    }
+
+    .third-menu h3 {
+        font-size: 2rem;
+        left: 3rem;
+        top: 2rem;
+    }
+
+    .third-menu a {
+        font-size: 1.5rem;
+        top: 10rem;
+        left: 3rem;
+    }
+
+    .menu-button {
+        padding: 1.5rem 3rem 1.5rem 3rem;
+    }
+
+    .grouped-menu {
+        flex-wrap: wrap;
+    }
+
+    .products {
+        flex-wrap: wrap;
+    }
+
+    .products-item {
+        padding: 2rem;
+        margin: 1rem;
+    }
+
+    .item-description {
+        font-size: 2rem;
+    }
+
+    .product-meta {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+
+    .first-menu,
+    .second-group-menu {
+        width: 50%;
+    }
+
+    .category-nav {
+        margin: 1.2rem;
+    }
+
+    .category-border {
+        padding: 0.5rem 1.2rem 0.5rem 1.2rem;
+    }
+
+    .category-border-pizza {
+        padding: 0.5rem 1.2rem 0.5rem 1.2rem;
+    }
+
+    .category-item span {
+        line-height: 1;
+    }
+
+    .products {
+        gap: 0;
+    }
+
+    .products-item {
+        margin-left: 1rem;
+    }
+}

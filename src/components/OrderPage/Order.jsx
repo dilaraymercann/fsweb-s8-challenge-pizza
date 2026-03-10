@@ -111,7 +111,7 @@ export default function Order() {
         )
             .then((response) => {
                 console.log("Sipariş oluşturuldu:", response.data);
-                history.push("/success");
+                history.push("/success", { order: response.data });
             })
             .catch((error) => {
                 console.error("Hata:", error);
@@ -179,20 +179,39 @@ export default function Order() {
                                     Boyut Seç<span className="text-danger ms-1">*</span>
                                 </Label>
 
-                                <FormGroup>
-                                    <Input name="boyut" type="radio" value="kucuk" required onChange={handleChange} />
-                                    <Label className="ms-2" check>Küçük</Label>
-                                </FormGroup>
+                                <label className="custom-radio">
+                                    S
+                                    <input
+                                        type="radio"
+                                        name="boyut"
+                                        value="S"
+                                        required
+                                        onChange={handleChange}
+                                    />
+                                    <span className="checkmark"></span>
+                                </label>
 
-                                <FormGroup>
-                                    <Input name="boyut" type="radio" value="orta" onChange={handleChange} />
-                                    <Label className="ms-2" check>Orta</Label>
-                                </FormGroup>
+                                <label className="custom-radio">
+                                    M
+                                    <input
+                                        type="radio"
+                                        name="boyut"
+                                        value="M"
+                                        onChange={handleChange}
+                                    />
+                                    <span className="checkmark"></span>
+                                </label>
 
-                                <FormGroup>
-                                    <Input name="boyut" type="radio" value="buyuk" onChange={handleChange} />
-                                    <Label className="ms-2" check>Büyük</Label>
-                                </FormGroup>
+                                <label className="custom-radio">
+                                    L
+                                    <input
+                                        type="radio"
+                                        name="boyut"
+                                        value="L"
+                                        onChange={handleChange}
+                                    />
+                                    <span className="checkmark"></span>
+                                </label>
                             </Col>
 
                             <Col xs="6">
@@ -226,15 +245,18 @@ export default function Order() {
 
                             {malzemeler.map((item) => (
                                 <Col xs="6" md="4" className="mt-3" key={item.value}>
-                                    <FormGroup check>
+                                    <label className="custom-checkbox">
+                                        {item.label}
+
                                         <Input
                                             type="checkbox"
                                             name="malzeme"
                                             value={item.value}
                                             onChange={handleChange}
                                         />
-                                        <Label check>{item.label}</Label>
-                                    </FormGroup>
+
+                                        <span className="checkmark"></span>
+                                    </label>
                                 </Col>
                             ))}
                         </Row>
