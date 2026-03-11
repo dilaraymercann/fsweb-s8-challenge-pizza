@@ -70,6 +70,25 @@ describe('template spec', () => {
     cy.get('input[name="malzeme"]').eq(10).check({ force: true })
 
   })
+  it("Ad soyad en az 3 karakter olmalı", () => {
+
+    cy.visit("http://localhost:5173/order")
+
+    cy.get('[data-cy="size-m"]').check()
+    cy.get('[data-cy="dough-select"]').select("ince")
+
+    cy.get('input[name="malzeme"]').eq(0).check()
+    cy.get('input[name="malzeme"]').eq(1).check()
+    cy.get('input[name="malzeme"]').eq(2).check()
+    cy.get('input[name="malzeme"]').eq(3).check()
+
+    cy.get('[data-cy="customer-name"]').type("Al")
+
+    cy.get('[data-cy="submit-order"]:visible').click()
+
+    cy.url().should("include", "/order")
+
+  })
   it("Geçerli seçimlerle sipariş verildiğinde success sayfasına yönleniyor mu?", () => {
 
     cy.visit("http://localhost:5173/order")
@@ -81,6 +100,7 @@ describe('template spec', () => {
     cy.get('input[name="malzeme"]').eq(1).check()
     cy.get('input[name="malzeme"]').eq(2).check()
     cy.get('input[name="malzeme"]').eq(3).check()
+    cy.get('[data-cy="customer-name"]').type("Dilaray")
 
     cy.get('[data-cy="submit-order"]:visible').click()
 

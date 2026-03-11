@@ -6,22 +6,19 @@ import { useLocation } from "react-router-dom";
 export default function Success() {
     const location = useLocation();
     const orderData = location.state?.order;
+
+    if (!orderData) {
+        return <p>Sipariş bulunamadı</p>;
+    }
+
     return (<>
         <div
-            style={{
-                backgroundColor: "#CE2829",
-                width: "100vw",
-                minHeight: "100vh",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center"
-            }}
+            className="order-wrapper"
         >
             <img
                 src="/images/iteration-1-images/logo.svg"
                 alt="Teknolojik Yemekler"
-                style={{ marginBottom: "4rem", marginTop: "3rem" }}
+                className="pageTitle"
             />
             <div>
                 <p
@@ -61,12 +58,12 @@ export default function Success() {
                     <h4 style={{
                         color: "white",
                         textAlign: "center"
-                    }}>{orderData.isim}</h4>
+                    }}>{orderData?.isim}</h4>
                 </div>
                 <div className="orderDetail">
-                    <p>Boyut: <span style={{ fontWeight: "bold" }}>{orderData.boyut}</span></p>
-                    <p>Hamur: <span style={{ fontWeight: "bold" }}>{orderData.hamur}</span></p>
-                    <p>Malzemeler: <span style={{ fontWeight: "bold" }}>{orderData.malzeme.join(", ")}</span></p>
+                    <p>Boyut: <span style={{ fontWeight: "bold" }}>{orderData?.boyut}</span></p>
+                    <p>Hamur: <span style={{ fontWeight: "bold" }}>{orderData?.hamur}</span></p>
+                    <p>Malzemeler: <span style={{ fontWeight: "bold" }}>{orderData?.malzeme.join(", ")}</span></p>
                 </div>
             </div>
 
@@ -78,12 +75,12 @@ export default function Success() {
 
                     <div className="card-row">
                         <span>Seçimler</span>
-                        <span>{orderData.secimler}₺</span>
+                        <span>{orderData?.secimler}₺</span>
                     </div>
 
                     <div className="card-row">
                         <span>Toplam</span>
-                        <span>{orderData.fiyat}₺</span>
+                        <span>{orderData?.fiyat}₺</span>
                     </div>
 
                 </CardBody>

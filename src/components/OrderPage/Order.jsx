@@ -4,6 +4,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import { Form, FormGroup, Container, Row, Col, Input, Label, ButtonGroup, Button, Card, CardBody } from 'reactstrap';
+import { toast } from "react-toastify";
 
 
 const initialFormData = {
@@ -68,9 +69,8 @@ export default function Order() {
             let updatedMalzemeler = [...(formData[name] || [])];
 
             if (checked) {
-                if (updatedMalzemeler.length >= 10) {
-                    alert("En fazla 10 malzeme seçebilirsiniz");
-                    return;
+                if (updatedMalzemeler.length > 10) {
+                    toast.error("En fazla 10 malzeme seçebilirsiniz");
                 }
                 updatedMalzemeler.push(value);
             } else {
@@ -97,13 +97,23 @@ export default function Order() {
     function handleSubmit(event) {
         event.preventDefault();
 
+        if (!formData.boyut || formData.boyut.length === 0) {
+            toast.error("Boyut seçmelisiniz");
+            return;
+        }
+
+        if (!formData.hamur || formData.hamur.length === 0) {
+            toast.error("Hamur kalınlığı seçmelisiniz");
+            return;
+        }
+
         if (!formData.malzeme || formData.malzeme.length < 4) {
-            alert("En az 4 malzeme seçmelisiniz");
+            toast.error("En az 4 malzeme seçmelisiniz");
             return;
         }
 
         if (formData.malzeme.length > 10) {
-            alert("En fazla 10 malzeme seçebilirsiniz");
+            toast.error("En fazla 10 malzeme seçebilirsiniz");
             return;
         }
 
@@ -118,11 +128,11 @@ export default function Order() {
             }
         )
             .then((response) => {
-                console.log("Sipariş oluşturuldu:", response.data);
+                toast.success("Sipariş başarıyla oluşturuldu");
                 history.push("/success", { order: response.data });
             })
             .catch((error) => {
-                console.error("Hata:", error);
+                toast.error(error.message);
             });
     }
 
@@ -207,7 +217,6 @@ export default function Order() {
                                         type="radio"
                                         name="boyut"
                                         value="S"
-                                        required
                                         onChange={handleChange}
                                         data-cy="size-s"
                                     />
@@ -247,7 +256,6 @@ export default function Order() {
                                         id="hamurSec"
                                         name="hamur"
                                         type="select"
-                                        required
                                         defaultValue=""
                                         onChange={handleChange}
                                         data-cy="dough-select"
@@ -265,7 +273,7 @@ export default function Order() {
                         </Row>
                         <Row className="mt-4">
                             <Col md="12">
-                                <Label className="fw-bold">Ek Malzemeler</Label>
+                                <Label className="fw-bold">Ek Malzemeler<span className="text-danger ms-1">*</span></Label>
                                 <p className="text-muted">En fazla 10 malzeme seçebilirsiniz. 5₺</p>
                             </Col>
 
@@ -287,6 +295,23 @@ export default function Order() {
                                 </Col>
                             ))}
                         </Row>
+                        <FormGroup className="mt-4">
+                            <Label for="name" className="fw-bold mt-3">
+                                Ad Soyad<span className="text-danger ms-1">*</span>
+                            </Label>
+
+                            <Input
+                                className='mt-3'
+                                id="name"
+                                name="name"
+                                type="text"
+                                minLength={3}
+                                required
+                                placeholder='Adınızı yazınız'
+                                onChange={handleChange}
+                                data-cy="customer-name"
+                            />
+                        </FormGroup>
                         <FormGroup className="mt-4">
                             <Label for="note" className="fw-bold mt-3">
                                 Sipariş Notu
