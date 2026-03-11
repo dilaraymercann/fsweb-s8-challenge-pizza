@@ -57,7 +57,7 @@ export default function Main() {
                         <img src="images/iteration-2-images/cta/kart-1.png" alt="Özel Lezzetus" />
                         <h1>Özel<br /> Lezzetus</h1>
                         <h3>Position:Absolute Acı Burger</h3>
-                        <Link to="/order" className="menu-button">
+                        <Link to="/order" className="menu-button" data-cy="order-button">
                             SİPARİŞ VER
                         </Link>
                     </div>
@@ -65,14 +65,14 @@ export default function Main() {
                         <div className="second-menu">
                             <img src="images/iteration-2-images/cta/kart-2.png" alt="Hackathlon Burger Menu" />
                             <h2>Hackathlon <br />Burger Menü</h2>
-                            <Link to="/order" className="menu-button">
+                            <Link to="/order" className="menu-button" data-cy="order-button">
                                 SİPARİŞ VER
                             </Link>
                         </div>
                         <div className="third-menu">
                             <img src="images/iteration-2-images/cta/kart-3.png" alt="Kurye" />
                             <h3><span className="third-menu-text">Çoooook</span> hızlı <br />npm gibi kurye</h3>
-                            <Link to="/order" className="menu-button">
+                            <Link to="/order" className="menu-button" data-cy="order-button">
                                 SİPARİŞ VER
                             </Link>
                         </div>

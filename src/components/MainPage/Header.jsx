@@ -10,7 +10,7 @@ export default function Header() {
                 <p className="header-text">
                     KOD ACIKTIRIR <br /> PIZZA, DOYURUR
                 </p>
-                <Link to="/order" className="orderButton">
+                <Link to="/order" className="orderButton" data-cy="order-button">
                     ACIKTIM
                 </Link>
             </div>

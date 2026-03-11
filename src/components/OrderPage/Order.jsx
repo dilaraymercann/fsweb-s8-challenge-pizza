@@ -5,6 +5,7 @@ import axios from "axios";
 import { useHistory } from "react-router-dom";
 import { Form, FormGroup, Container, Row, Col, Input, Label, ButtonGroup, Button, Card, CardBody } from 'reactstrap';
 
+
 const initialFormData = {
     isim: "Position Absolute Acı Pizza",
     boyut: "",
@@ -31,6 +32,8 @@ const malzemeler = [
     { label: "Domates", value: "domates" },
     { label: "Jalapeno", value: "jalapeno" }
 ];
+
+const apiKey = import.meta.env.VITE_API_KEY;
 
 export default function Order() {
     const [formData, setFormData] = useState(initialFormData);
@@ -99,12 +102,17 @@ export default function Order() {
             return;
         }
 
+        if (formData.malzeme.length > 10) {
+            alert("En fazla 10 malzeme seçebilirsiniz");
+            return;
+        }
+
         axios.post(
             "https://reqres.in/api/pizza",
             formData,
             {
                 headers: {
-                    "x-api-key": "reqres_842e591c7b8b414a92d01eb8a9561338",
+                    "x-api-key": apiKey,
                     "Content-Type": "application/json"
                 }
             }
@@ -201,6 +209,7 @@ export default function Order() {
                                         value="S"
                                         required
                                         onChange={handleChange}
+                                        data-cy="size-s"
                                     />
                                     <span className="checkmark"></span>
                                 </label>
@@ -212,6 +221,7 @@ export default function Order() {
                                         name="boyut"
                                         value="M"
                                         onChange={handleChange}
+                                        data-cy="size-m"
                                     />
                                     <span className="checkmark"></span>
                                 </label>
@@ -223,6 +233,7 @@ export default function Order() {
                                         name="boyut"
                                         value="L"
                                         onChange={handleChange}
+                                        data-cy="size-l"
                                     />
                                     <span className="checkmark"></span>
                                 </label>
@@ -239,6 +250,7 @@ export default function Order() {
                                         required
                                         defaultValue=""
                                         onChange={handleChange}
+                                        data-cy="dough-select"
                                     >
                                         <option value="" disabled>
                                             - Hamur Kalınlığı Seç -
@@ -319,6 +331,7 @@ export default function Order() {
                                         color="warning"
                                         className="flex-fill d-md-none"
                                         type="submit"
+                                        data-cy="submit-order"
                                     >
                                         SİPARİŞ VER
                                     </Button>
@@ -348,6 +361,7 @@ export default function Order() {
                                     color="warning"
                                     className="w-100 mt-2 d-none d-md-block"
                                     type="submit"
+                                    data-cy="submit-order"
                                 >
                                     SİPARİŞ VER
                                 </Button>
