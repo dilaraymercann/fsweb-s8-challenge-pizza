@@ -10,42 +10,42 @@ export default function Main() {
 
                         <li className="category-item">
                             <a href="#">
-                                <img src="./images/iteration-2-images/icons/1.svg" alt="YENİ! Kore" />
+                                <img src="/images/iteration-2-images/icons/1.svg" alt="YENİ! Kore" />
                                 <span>YENİ! Kore</span>
                             </a>
                         </li>
 
                         <li className="category-item">
                             <a href="#">
-                                <img src="./images/iteration-2-images/icons/2.svg" alt="Pizza" />
+                                <img src="/images/iteration-2-images/icons/2.svg" alt="Pizza" />
                                 <span>Pizza</span>
                             </a>
                         </li>
 
                         <li className="category-item">
                             <a href="#">
-                                <img src="./images/iteration-2-images/icons/3.svg" alt="Burger" />
+                                <img src="/images/iteration-2-images/icons/3.svg" alt="Burger" />
                                 <span>Burger</span>
                             </a>
                         </li>
 
                         <li className="category-item">
                             <a href="#">
-                                <img src="./images/iteration-2-images/icons/4.svg" alt="Kızartmalar" />
+                                <img src="/images/iteration-2-images/icons/4.svg" alt="Kızartmalar" />
                                 <span>Kızartmalar</span>
                             </a>
                         </li>
 
                         <li className="category-item">
                             <a href="#">
-                                <img src="./images/iteration-2-images/icons/5.svg" alt="Fast Food" />
+                                <img src="/images/iteration-2-images/icons/5.svg" alt="Fast Food" />
                                 <span>Fast food</span>
                             </a>
                         </li>
 
                         <li className="category-item">
                             <a href="#">
-                                <img src="./images/iteration-2-images/icons/6.svg" alt="Gazlı İçecek" />
+                                <img src="/images/iteration-2-images/icons/6.svg" alt="Gazlı İçecek" />
                                 <span>Gazlı İçecek</span>
                             </a>
                         </li>
@@ -89,42 +89,42 @@ export default function Main() {
 
                                 <li className="category-item active category-border">
                                     <a href="#">
-                                        <img src="./images/iteration-2-images/icons/1.svg" alt="Ramen" />
+                                        <img src="/images/iteration-2-images/icons/1.svg" alt="Ramen" />
                                         <span>Ramen</span>
                                     </a>
                                 </li>
 
                                 <li className="category-item category-border-pizza">
                                     <a href="#">
-                                        <img src="./images/iteration-2-images/icons/2.svg" alt="Pizza" />
+                                        <img src="/images/iteration-2-images/icons/2.svg" alt="Pizza" />
                                         <span>Pizza</span>
                                     </a>
                                 </li>
 
                                 <li className="category-item category-border">
                                     <a href="#">
-                                        <img src="./images/iteration-2-images/icons/3.svg" alt="Burger" />
+                                        <img src="/images/iteration-2-images/icons/3.svg" alt="Burger" />
                                         <span>Burger</span>
                                     </a>
                                 </li>
 
                                 <li className="category-item category-border">
                                     <a href="#">
-                                        <img src="./images/iteration-2-images/icons/4.svg" alt="French fries" />
+                                        <img src="/images/iteration-2-images/icons/4.svg" alt="French fries" />
                                         <span>French fries</span>
                                     </a>
                                 </li>
 
                                 <li className="category-item category-border">
                                     <a href="#">
-                                        <img src="./images/iteration-2-images/icons/5.svg" alt="Fast Food" />
+                                        <img src="/images/iteration-2-images/icons/5.svg" alt="Fast Food" />
                                         <span>Fast food</span>
                                     </a>
                                 </li>
 
                                 <li className="category-item category-border">
                                     <a href="#">
-                                        <img src="./images/iteration-2-images/icons/6.svg" alt="Soft drinks" />
+                                        <img src="/images/iteration-2-images/icons/6.svg" alt="Soft drinks" />
                                         <span>Soft drinks</span>
                                     </a>
                                 </li>
@@ -134,7 +134,7 @@ export default function Main() {
                 </div>
                 <div className="products">
                     <div className="products-item">
-                        <img src="./images/iteration-2-images/pictures/food-1.png" alt="Terminal Pizza" />
+                        <img src="/images/iteration-2-images/pictures/food-1.png" alt="Terminal Pizza" />
                         <div className="products-detail">
                             <span className="item-description">Terminal Pizza</span>
                             <div className="product-meta">
@@ -147,7 +147,7 @@ export default function Main() {
                         </div>
                     </div>
                     <div className="products-item">
-                        <img src="./images/iteration-2-images/pictures/food-2.png" alt="Position Absolute Acı Pizza" />
+                        <img src="/images/iteration-2-images/pictures/food-2.png" alt="Position Absolute Acı Pizza" />
                         <div className="products-detail">
                             <span className="item-description">Position Absolute Acı Pizza</span>
                             <div className="product-meta">
@@ -160,7 +160,7 @@ export default function Main() {
                         </div>
                     </div>
                     <div className="products-item">
-                        <img src="./images/iteration-2-images/pictures/food-3.png" alt="useEffect Tavuklu Burger" />
+                        <img src="/images/iteration-2-images/pictures/food-3.png" alt="useEffect Tavuklu Burger" />
                         <div className="products-detail">
                             <span className="item-description">useEffect Tavuklu Burger</span>
                             <div className="product-meta">
